@@ -9,4 +9,9 @@ public interface AdminServices {
     List<User> getall();
     void UpdateROle(Long id,String role);
     List<Role> getAllROles();
+  //  String banUser(String email);
+ //   String suspendUser(String email);
+ //   String unbanUser(String email);
+ //   String automaticUnbanUser();
+     // void deleteUser(String email);
 }
