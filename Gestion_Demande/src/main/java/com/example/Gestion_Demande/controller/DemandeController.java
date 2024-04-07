@@ -43,7 +43,6 @@ public class DemandeController {
     }
 
 
-    // build delete employee REST API
 
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteproduit(@PathVariable("id") long

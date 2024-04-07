@@ -1,9 +1,12 @@
 package com.example.Gestion_Demande.services.serviceImpl;
 
 import com.example.Gestion_Demande.entity.Demande;
+import com.example.Gestion_Demande.entity.Notification;
+import com.example.Gestion_Demande.entity.User;
 import com.example.Gestion_Demande.repository.DemandeRepo;
 import com.example.Gestion_Demande.services.DemandeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,9 +14,11 @@ import java.util.List;
 public class DemandeServiceImpl implements DemandeService {
     @Autowired
     DemandeRepo demandeRepo;
+
     @Override
     public Demande save(Demande demande) {
-        return demandeRepo.save(demande);
+        Demande savedDemande = demandeRepo.save(demande);
+        return savedDemande;
     }
 
     @Override
@@ -49,4 +54,6 @@ public class DemandeServiceImpl implements DemandeService {
     public void delete(Long id) {
 demandeRepo.deleteById(id);
     }
+
+
 }

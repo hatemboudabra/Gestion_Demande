@@ -57,7 +57,8 @@ public class User {
     }
     @OneToMany
     List<Demande> demandes =new ArrayList<>();
-
+    @OneToMany
+    List<Notification> notificationList=new ArrayList<>();
     public Long getId() {
         return id;
     }
