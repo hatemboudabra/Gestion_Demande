@@ -8,7 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -53,6 +55,8 @@ public class User {
         this.email = email;
         this.password = password;
     }
+    @OneToMany
+    List<Demande> demandes =new ArrayList<>();
 
     public Long getId() {
         return id;

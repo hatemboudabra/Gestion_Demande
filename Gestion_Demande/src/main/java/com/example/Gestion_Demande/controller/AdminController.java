@@ -1,5 +1,6 @@
 package com.example.Gestion_Demande.controller;
 
+import com.example.Gestion_Demande.entity.Demande;
 import com.example.Gestion_Demande.entity.Role;
 import com.example.Gestion_Demande.entity.User;
 import com.example.Gestion_Demande.repository.UserRepository;
@@ -7,6 +8,7 @@ import com.example.Gestion_Demande.services.AdminServices;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -39,4 +41,5 @@ public class AdminController {
         return adminServices.getAllROles();
 
     }
+
 }
